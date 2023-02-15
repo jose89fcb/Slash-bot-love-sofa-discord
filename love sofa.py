@@ -1,14 +1,10 @@
-import urllib
 import json
 import requests
 import discord
 from discord.ext import commands
-import datetime
 import io
  
-from urllib import parse, request
-from PIL import Image, ImageDraw, ImageFont, ImageFile
-import time
+from PIL import Image
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_choice, create_option
 from discord_slash import SlashCommand, SlashContext
@@ -21,7 +17,7 @@ bot = commands.Bot(command_prefix='!', description="ayuda bot") #Comando
 bot.remove_command("help") # Borra el comando por defecto !help
 slash = SlashCommand(bot, sync_commands=True)
 @slash.slash(
-    name="sofahc", description="Keko habbo Hotel",
+    name="lovesofa", description="Keko habbo Hotel",
     options=[
                 create_option(
                   name="keko1",
@@ -43,7 +39,7 @@ slash = SlashCommand(bot, sync_commands=True)
              ])
 
 
-async def _sofahc(ctx:SlashContext, keko1:str,keko2:str):
+async def _lovesofa(ctx:SlashContext, keko1:str,keko2:str):
     await ctx.defer()
    
     
